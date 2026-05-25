@@ -1,0 +1,46 @@
+.title{
+    color: rgba(17, 124, 239, 0.759);
+}
+.edit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.review-input{
+    width: 900px;
+    height: 420px;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    
+}
+.rating{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.star-empty{
+    font-size: 1.1rem;
+}
+.star-empty:hover{
+    color: gold;
+}
+.rating {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  font-size: 1.8rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.star.active {
+  color: gold;
+}

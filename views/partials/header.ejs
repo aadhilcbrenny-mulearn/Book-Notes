@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Notes</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <header class="py-3 mb-4 border-bottom">
+      <div
+        class="container-fluid d-flex align-items-center justify-content-between px-5"
+      >
+        <form action="/home" method="post">
+          <input type="submit"  class="home-redirect" id="home" hidden>
+          <label for="home"><h1>Book Notes</h1></label>
+        </form>
+        <div class="dropdown">
+          <span>Sort by:</span>
+          <button
+            class="btn btn-outline-dark  dropdown-toggle ms-2"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="true"
+          >
+            <%= locals.sort || "Select filter..."%>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <form action="/sort" method="post">
+                <input type="submit" name="sort" value="Recency" id="recents" hidden>
+                <label for="recents" class="dropdown-item">Recency</label>
+              </form>
+            </li>
+            <li>
+               <form action="/sort" method="post">
+                <input type="submit" name="sort" value="Title" id="title" hidden>
+                <label for="title" class="dropdown-item">Title</label>
+              </form>
+            </li>
+            <li> <form action="/sort" method="post">
+                <input type="submit" name="sort" value="Author" id="author" hidden>
+                <label for="author" class="dropdown-item">Author</label>
+              </form>
+            </li>
+          </ul>
+        </div>
+        <form class="search" role="search" action="/search" method="post">
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Search..."
+            aria-label="Search"
+            name="query"
+          />
+        </form>
+      </div>
+    </header>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

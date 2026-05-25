@@ -1,0 +1,69 @@
+.fs-2 {
+  font-weight: bold;
+  color: rgba(0, 136, 255, 0.864);
+}
+.btn-outline-dark:hover {
+  background-color: rgb(230, 230, 230);
+  color: black;
+  border-color: black;
+}
+
+.dropdown-toggle:focus,
+.dropdown-toggle:active,
+.show > .dropdown-toggle {
+  background-color: rgb(230, 230, 230) !important;
+  color: black !important;
+  border: 1px solid black !important;
+  box-shadow: none !important;
+}
+.form-control {
+  width: 300px;
+}
+.container {
+  display: flex;
+  padding: 30px 10px;
+  margin: 0px 25px;
+  gap: 80px;
+}
+.image {
+  display: flex;
+  width: 350px;
+  height: 500px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+hr {
+  width: 75%;
+  margin: 0 auto;
+}
+img {
+  width: 300px;
+  height: 400px; 
+}
+.star-filled {
+    color: gold;
+    font-size: 1.1rem;
+}
+
+.star-empty {
+    color: gray;
+    font-size: 1.1rem;
+}
+.home-redirect + label{
+  cursor: pointer;
+  color: rgba(17, 124, 239, 0.759);
+}
+.home-redirect + label + h1{
+  font-family: sans-serif;
+  font-weight: 900;
+}
+.dropdown-item{
+  content: none;
+  text-decoration: none;
+  text-transform: none;
+}
+.options{
+  display: inline-flex;
+  gap: 10px;
+}
